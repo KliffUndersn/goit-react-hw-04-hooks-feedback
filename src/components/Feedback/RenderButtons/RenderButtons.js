@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
 const RenderButtons = ({ clickHandler,name}) => {
 const names = Object.keys(name)
@@ -24,3 +25,7 @@ const names = Object.keys(name)
 
 export default RenderButtons;
 
+RenderButtons.propTypes={
+  clickHandler:PropTypes.func.isRequired,
+  name:PropTypes.object.isRequired,
+}

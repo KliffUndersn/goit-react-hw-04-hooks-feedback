@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
 const Statistic = ({
   value,
@@ -20,3 +21,9 @@ const Statistic = ({
 };
 
 export default Statistic;
+
+Statistic.propTypes={
+  value:PropTypes.object.isRequired,
+  countTotalFeedback:PropTypes.number.isRequired,
+  countPositiveFeedbackPercentage:PropTypes.number.isRequired,
+}
