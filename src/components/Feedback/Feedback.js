@@ -44,7 +44,7 @@ const Feedback  = () => {
         />
         <h2>Statistics</h2>
 
-        {countPositiveFeedbackPercentage() ? (
+        {countTotalFeedback() ? (
           <Statistic
             value={{good,neutral,bad}}
             countTotalFeedback={countTotalFeedback()}
