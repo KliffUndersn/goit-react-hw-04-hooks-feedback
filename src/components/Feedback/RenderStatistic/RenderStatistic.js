@@ -6,6 +6,7 @@ const Statistic = ({
   countTotalFeedback,
   countPositiveFeedbackPercentage,
 }) => {
+  console.log(value)
   return (
     <ul>
       <li>Good: {value.good}</li>
@@ -23,7 +24,9 @@ const Statistic = ({
 export default Statistic;
 
 Statistic.propTypes={
-  value:PropTypes.object.isRequired,
+  value:PropTypes.shape({good:PropTypes.number,
+                        neutral:PropTypes.number,
+                        bad:PropTypes.number,}),
   countTotalFeedback:PropTypes.number.isRequired,
   countPositiveFeedbackPercentage:PropTypes.number.isRequired,
 }
